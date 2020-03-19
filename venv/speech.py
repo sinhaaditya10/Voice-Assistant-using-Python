@@ -19,9 +19,9 @@ import pyautogui
 import smtplib
 import pygame
 
-output= gTTS(text= "Hello! I'm Alfred, your personal assistant",lang="en-au",slow=False)
+output= gTTS(text= "Hello! I'm Alexa, your personal assistant",lang="en-au",slow=False)
 output.save("output.mp3")
-print("Hello! I'm Alfred, your personal assistant")
+print("Hello! I'm Alexa, your personal assistant")
 playsound.playsound('output.mp3')
 os.remove('output.mp3')
 
@@ -129,7 +129,7 @@ def web():
 
 def VoiceRecognition():
     pygame.mixer.init()
-    pygame.mixer.music.load(r'C:\Users\nEW u\Desktop\tnp\ping.mp3')
+    pygame.mixer.music.load(r'C:\Users\nEW u\PycharmProjects\Speech\venv\ping.mp3')
     owm = pyowm.OWM('8a954916f1766a056c995e33ae0e3eac')
     r1 = sr.Recognizer()
     r2 = sr.Recognizer()
@@ -215,7 +215,7 @@ def VoiceRecognition():
 
                         elif screenshot.search(get)!=None:
                             myscreenshot= pyautogui.screenshot()
-                            myloc= r'C:\Users\nEW u\Desktop\tnp'
+                            myloc= r'C:\Users\nEW u\PycharmProjects\Speech\venv\Screenshots'
                             fn= str(datetime.datetime.now().timestamp()).split('.')[0]+".png"
                             myscreenshot.save(myloc+'\\'+fn)
                             print("Screenshot taken")
